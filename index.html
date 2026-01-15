@@ -9,30 +9,29 @@
         body { 
             font-family: 'Segoe UI', Tahoma, sans-serif; 
             color: #2c3e50; 
-            line-height: 1.25; 
-            padding: 0.4in; /* Hard-coded print margin */
+            line-height: 1.2; 
+            padding: 0.35in; 
             background: white;
         }
 
-        .header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #34495e; padding-bottom: 8px; margin-bottom: 12px; }
-        .header-left h1 { font-size: 22pt; color: #2c3e50; }
-        .header-left p { font-size: 10pt; font-weight: 600; color: #7f8c8d; }
-        .header-right { text-align: right; font-size: 8.5pt; }
+        .header { border-bottom: 2px solid #34495e; padding-bottom: 8px; margin-bottom: 10px; }
+        .header h1 { font-size: 22pt; margin-bottom: 2px; }
+        .contact { font-size: 9pt; display: flex; gap: 15px; color: #555; }
 
-        .summary { font-size: 9pt; background: #f8f9fa; padding: 8px; border-left: 3px solid #34495e; margin-bottom: 12px; }
+        .summary { font-size: 8.8pt; background: #f8f9fa; padding: 8px; border-left: 3px solid #34495e; margin-bottom: 12px; }
 
-        .main-layout { display: flex; gap: 20px; }
-        .content-left { flex: 2; }
-        .content-right { flex: 1; background: #fdfdfd; padding: 10px; border-radius: 4px; font-size: 8.5pt; height: fit-content; border: 1px solid #eee; }
+        .layout { display: flex; gap: 20px; }
+        .left-col { flex: 2.5; }
+        .right-col { flex: 1; font-size: 8.5pt; }
 
-        .section-title { font-size: 11pt; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #34495e; margin-bottom: 8px; margin-top: 5px; }
+        .section-title { font-size: 10.5pt; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #34495e; margin-bottom: 6px; margin-top: 8px; }
         
         .job { margin-bottom: 10px; }
-        .job-head { font-size: 10pt; font-weight: bold; display: flex; justify-content: space-between; }
-        .job-company { font-size: 9pt; font-style: italic; color: #555; margin-bottom: 3px; }
+        .job-head { font-size: 9.5pt; font-weight: bold; display: flex; justify-content: space-between; }
+        .job-company { font-size: 9pt; font-style: italic; margin-bottom: 2px; }
         
-        ul { padding-left: 15px; }
-        li { font-size: 8.8pt; margin-bottom: 2px; }
+        ul { padding-left: 14px; }
+        li { font-size: 8.6pt; margin-bottom: 2px; }
 
         @media print {
             body { padding: 0.3in; }
@@ -42,62 +41,62 @@
 </head>
 <body>
     <div class="header">
-        <div class="header-left">
-            <h1>PRESTON MOORE</h1>
-            <p>Technical Solutions Lead | Fraud Detection & Risk Engineering</p>
-        </div>
-        <div class="header-right">
-            Jacksonville, NC<br>
-            moorepjay@gmail.com<br>
-            linkedin.com/in/moorepreston
+        <h1>PRESTON MOORE</h1>
+        <div class="contact">
+            <span>Jacksonville, NC</span> | <span>moorepjay@gmail.com</span> | <span>linkedin.com/in/moorepreston</span>
         </div>
     </div>
 
     <div class="summary">
-        Self-driven problem solver with 9+ years solving complex fraud and risk challenges[cite: 6]. Expert in Microsoft Big Data stack (COSMOS/SCOPE, SQL, KQL) with hands-on development in C#, Python, and JavaScript for Global Tier-1 Cloud Providers[cite: 8].
+        Self-driven problem solver with 9+ years solving complex fraud and risk challenges through investigation, analysis, and custom tooling. Expert in Microsoft Big Data stack (COSMOS/SCOPE, SQL, KQL) with hands-on development in C#, Python, and JavaScript for Global Tier-1 Cloud Providers.
     </div>
 
-    <div class="main-layout">
-        <div class="content-left">
+    <div class="layout">
+        <div class="left-col">
             <div class="section-title">Professional Experience</div>
             
             <div class="job">
                 <div class="job-head"><span>Mathematics Educator</span> <span>2023-Present</span></div>
-                <div class="job-company">Dixon High School [cite: 11]</div>
+                <div class="job-company">Dixon High School</div>
                 <ul>
-                    <li>Apply risk modeling and probability expertise to NC Math 2 curriculum[cite: 13].</li>
-                    <li>Lead adopter for MagicSchool AI pilot program; technical feedback on GenAI[cite: 14].</li>
+                    <li>Apply risk modeling and probability expertise to NC Math 2 curriculum for 100+ students.</li>
+                    <li>Selected as lead adopter for MagicSchool AI pilot program for technical feedback.</li>
+                    <li>Awarded "Teacher Extraordinaire" (2025) for integrity and high-trust learning.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-head"><span>Risk Analyst (Technical Solutions)</span> <span>2018-2023</span></div>
-                <div class="job-company">IP House (Global Tier-1 Cloud Provider) [cite: 17]</div>
+                <div class="job-company">IP House (Global Tier-1 Cloud Provider)</div>
                 <ul>
-                    <li><strong>Liaison:</strong> Spearheaded systems to reconcile abusive Azure credits[cite: 19].</li>
-                    <li><strong>Data:</strong> Aggregated multi-stream telemetry via COSMOS/SCOPE to SQL/Power BI[cite: 21].</li>
-                    <li><strong>Tooling:</strong> Developed C# parsers to normalize logs for BEC/ATO mitigation[cite: 22].</li>
-                    <li><strong>Threat Intel:</strong> OSINT research on darkweb markets to profile bot authors[cite: 25].</li>
+                    <li><strong>Strategic Liaison:</strong> Spearheaded coordination to reconcile abusive Azure credits.</li>
+                    <li><strong>Global Operations:</strong> Managed quality for 5 agents across 4 global locations.</li>
+                    <li><strong>Data:</strong> Aggregated multi-stream telemetry via COSMOS/SCOPE to SQL/Power BI.</li>
+                    <li><strong>C# Tooling:</strong> Developed parsers to normalize logs for BEC/ATO mitigation.</li>
+                    <li><strong>Business Continuity:</strong> Adopted ADO; prevented total data loss during hardware failure.</li>
+                    <li><strong>Threat Intel:</strong> Profiled bot authors via OSINT research in darkweb marketplaces.</li>
+                    <li><strong>Adjudication:</strong> Forensic analysis for high-dollar Traffic Quality disputes.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-head"><span>Fraud Analyst</span> <span>2014-2018</span></div>
-                <div class="job-company">IP House (Global Tier-1 Cloud Provider) [cite: 28]</div>
+                <div class="job-company">IP House (Global Tier-1 Cloud Provider)</div>
                 <ul>
-                    <li>Manual fraud review across Xbox/MS Store to disrupt bot abuse[cite: 30].</li>
-                    <li>Automated workflows using Python/SQL, moving to proactive investigations[cite: 31].</li>
-                    <li>Created C# utility for automated decision uploads, ensuring data integrity[cite: 32].</li>
+                    <li>Conducted manual fraud review across Xbox/MS Store to disrupt bot abuse.</li>
+                    <li>Self-taught Python/SQL to automate workflows for proactive investigations.</li>
+                    <li>Created C# utility for automated decision uploads, ensuring data integrity.</li>
+                    <li>Volunteered for technical projects using COSMOS, SCOPE, and Power Automate.</li>
                 </ul>
             </div>
         </div>
 
-        <div class="content-right">
+        <div class="right-col">
             <div class="section-title">Technical Skills</div>
-            <p>SQL, KQL/Kusto, COSMOS/SCOPE, Power BI, DAX, Python, C#, JavaScript, VBA, Power Automate, Git, Azure DevOps, OSINT, Forensic Analysis, Risk Modeling[cite: 38].</p>
+            <p>SQL, KQL/Kusto, COSMOS/SCOPE, Power BI, DAX, Python, C#, JavaScript, VBA, Power Automate, Git, Azure DevOps, OSINT, Threat Intel, Forensic Analysis, Risk Modeling.</p>
             
             <div class="section-title" style="margin-top:15px;">Education</div>
-            <p><strong>B.A., Accounting & History</strong><br>Washington and Jefferson College [cite: 35, 36]</p>
+            <p><strong>B.A., Accounting & History</strong><br>Washington and Jefferson College </p>
         </div>
     </div>
 </body>
