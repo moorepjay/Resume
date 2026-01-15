@@ -5,72 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preston Moore - Resume</title>
     <style>
-        /* Global Reset & Logic */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.4; 
-            color: #2c3e50; 
-            background: #ffffff; 
-            padding: 40px; 
-            max-width: 850px; 
-            margin: 0 auto; 
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body { 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        line-height: 1.35; /* Tightened line height */
+        color: #2c3e50; 
+        background: #ffffff; 
+        padding: 30px 40px; /* Reduced top padding */
+        max-width: 850px; 
+        margin: 0 auto; 
+    }
 
-        /* Header & Contact Evidence */
-        .header { text-align: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 3px solid #34495e; }
-        .header h1 { font-size: 28px; font-weight: 700; color: #2c3e50; margin-bottom: 5px; letter-spacing: 1px; }
-        .header .subtitle { font-size: 15px; color: #7f8c8d; margin-bottom: 10px; font-weight: 600; }
-        .contact { font-size: 12px; color: #34495e; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .contact a { color: #34495e; text-decoration: none; border-bottom: 1px solid transparent; }
-        .contact a:hover { border-bottom: 1px solid #34495e; }
+    .header { text-align: center; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 3px solid #34495e; }
+    .header h1 { font-size: 26px; font-weight: 700; color: #2c3e50; margin-bottom: 4px; }
+    .header .subtitle { font-size: 14px; color: #7f8c8d; margin-bottom: 8px; font-weight: 600; }
+    .contact { font-size: 11px; color: #34495e; display: flex; justify-content: center; gap: 12px; }
 
-        /* Summary - The Hook */
-        .summary { margin-bottom: 25px; padding: 15px; background: #f8f9fa; border-left: 4px solid #34495e; font-size: 13px; line-height: 1.6; }
+    .summary { margin-bottom: 20px; padding: 12px; background: #f8f9fa; border-left: 4px solid #34495e; font-size: 12.5px; }
 
-        /* Sections & Job Blocks */
-        .section { margin-bottom: 20px; }
-        .section-title { font-size: 16px; font-weight: 700; color: #2c3e50; margin-bottom: 12px; padding-bottom: 4px; border-bottom: 2px solid #34495e; text-transform: uppercase; letter-spacing: 1px; }
-        
-        .job { margin-bottom: 18px; }
-        .job-header { margin-bottom: 5px; }
-        .job-title { font-size: 15px; font-weight: 700; color: #2c3e50; }
-        .job-company { font-size: 14px; color: #34495e; font-weight: 600; }
-        .job-date { font-size: 12px; color: #7f8c8d; font-style: italic; }
-        
-        .job ul { margin-top: 5px; padding-left: 18px; }
-        .job li { font-size: 12.5px; margin-bottom: 4px; line-height: 1.5; color: #34495e; }
+    .section { margin-bottom: 15px; }
+    .section-title { font-size: 15px; font-weight: 700; color: #2c3e50; margin-bottom: 10px; padding-bottom: 3px; border-bottom: 2px solid #34495e; text-transform: uppercase; }
+    
+    .job { margin-bottom: 15px; }
+    .job-title { font-size: 14px; font-weight: 700; }
+    .job-company { font-size: 13px; font-weight: 600; }
+    .job-date { font-size: 12px; color: #7f8c8d; font-style: italic; }
+    
+    .job ul { margin-top: 4px; padding-left: 18px; }
+    .job li { font-size: 12px; margin-bottom: 3px; color: #34495e; }
 
-        .education-item { margin-bottom: 10px; font-size: 13px; }
-        .skills-container { font-size: 12.5px; line-height: 1.6; color: #34495e; background: #fdfdfd; padding: 5px; }
+    .skills-container { font-size: 12px; line-height: 1.5; }
 
-        /* --- THE INVESTIGATOR'S PRINT PATCH --- */
-        @media print {
-            body { 
-                padding: 0 !important; 
-                margin: 12mm !important; /* Standardized PDF margins */
-                max-width: 100%; 
-            }
-            .summary { background: white !important; border: 1px solid #eee; border-left: 4px solid #34495e; }
-            
-            /* Logic: Prevent a job block from splitting between pages */
-            .job { 
-                page-break-inside: avoid; 
-                break-inside: avoid; 
-                display: block; /* Ensures flexbox doesn't cause ghost breaks */
-            }
-
-            /* Logic: Ensure a title never sits alone at the bottom of a page */
-            .section-title { 
-                page-break-after: avoid; 
-                break-after: avoid;
-            }
-
-            /* Clean up link visuals for PDF */
-            a { text-decoration: none !important; color: #2c3e50 !important; }
-        }
-    </style>
+    @media print {
+        body { padding: 0 !important; margin: 0 !important; }
+        .section { page-break-inside: auto; }
+        .job { page-break-inside: avoid; }
+        /* This prevents the section title from being orphaned */
+        .section-title { page-break-after: avoid; }
+    }
+</style>
 </head>
 <body>
     <div class="header">
