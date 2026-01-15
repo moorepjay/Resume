@@ -4,39 +4,37 @@
     <meta charset="UTF-8">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        @page { size: letter; margin: 0.5in; }
+        @page { size: letter; margin: 0; }
         
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
             color: #2c3e50; 
-            line-height: 1.5; 
-            padding: 0.5in; 
+            line-height: 1.1; 
+            padding: 0.3in; /* Tightened outer safety zone */
             background: white;
-            max-width: 850px;
-            margin: 0 auto;
         }
 
-        .header { text-align: center; border-bottom: 3px solid #34495e; padding-bottom: 15px; margin-bottom: 25px; }
-        .header h1 { font-size: 28pt; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; color: #2c3e50; }
-        .contact { font-size: 10.5pt; display: flex; justify-content: center; gap: 15px; color: #34495e; }
-        .contact a { color: #34495e; text-decoration: none; }
+        .header { text-align: center; border-bottom: 2px solid #34495e; padding-bottom: 5px; margin-bottom: 10px; }
+        .header h1 { font-size: 20pt; margin-bottom: 2px; text-transform: uppercase; }
+        .contact { font-size: 9pt; display: flex; justify-content: center; gap: 10px; }
 
-        .summary { font-size: 11pt; background: #f8f9fa; padding: 15px; border-left: 5px solid #34495e; margin-bottom: 30px; line-height: 1.6; }
+        .summary { font-size: 9pt; background: #f8f9fa; padding: 8px; border-left: 4px solid #34495e; margin-bottom: 10px; line-height: 1.2; }
 
-        .section-title { font-size: 14pt; font-weight: bold; text-transform: uppercase; border-bottom: 2px solid #34495e; margin-bottom: 15px; margin-top: 25px; padding-bottom: 5px; color: #2c3e50; }
+        .section-title { font-size: 11pt; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #34495e; margin-bottom: 8px; margin-top: 5px; }
         
-        .job { margin-bottom: 25px; }
-        .job-title { font-size: 13pt; font-weight: bold; color: #2c3e50; display: block; }
-        .job-company { font-size: 11.5pt; font-weight: 600; color: #34495e; display: block; }
-        .job-date { font-size: 10.5pt; color: #7f8c8d; font-style: italic; margin-bottom: 8px; display: block; }
+        /* Table Layout for Professional Experience */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+        .job-cell { vertical-align: top; padding-bottom: 8px; }
+        .job-title { font-size: 10.5pt; font-weight: bold; }
+        .job-meta { font-size: 9pt; color: #7f8c8d; font-style: italic; }
         
-        ul { padding-left: 20px; margin-top: 10px; }
-        li { font-size: 11pt; margin-bottom: 6px; color: #2c3e50; }
+        ul { padding-left: 15px; margin-top: 2px; }
+        li { font-size: 9pt; margin-bottom: 1px; }
 
-        .footer-area { font-size: 11pt; line-height: 1.6; margin-top: 15px; padding-top: 10px; }
+        .skills-footer { font-size: 9pt; line-height: 1.3; border-top: 1px solid #eee; padding-top: 5px; }
 
         @media print {
-            body { padding: 0; }
+            body { padding: 0.25in; }
             .summary { -webkit-print-color-adjust: exact; background-color: #f8f9fa !important; }
         }
     </style>
@@ -44,61 +42,60 @@
 <body>
     <div class="header">
         <h1>PRESTON MOORE</h1>
-        <div class="contact">
-            <span>Jacksonville, North Carolina</span> | 
-            <a href="mailto:moorepjay@gmail.com">moorepjay@gmail.com</a> | 
-            <a href="https://linkedin.com/in/moorepreston">linkedin.com/in/moorepreston</a>
-        </div>
+        <div class="contact">Jacksonville, NC | moorepjay@gmail.com | linkedin.com/in/moorepreston</div>
     </div>
 
     <div class="summary">
-        Self-driven problem solver with 9+ years solving complex fraud and risk challenges through investigation, analysis, and custom tooling. Proven track record building end-to-end solutions spanning threat intelligence, data engineering, and offensive security for a Global Tier-1 Cloud Provider. Expert in Microsoft Big Data stack (COSMOS/SCOPE, SQL, KQL) with hands-on development in C#, Python, and JavaScript.
+        Self-driven problem solver with 9+ years solving complex fraud and risk challenges. Expert in Microsoft Big Data stack (COSMOS/SCOPE, SQL, KQL) with hands-on development in C#, Python, and JavaScript for Global Tier-1 Cloud Providers.
     </div>
 
     <div class="section-title">Professional Experience</div>
     
-    <div class="job">
-        <span class="job-title">Mathematics Educator</span>
-        <span class="job-company">Dixon High School</span>
-        <span class="job-date">August 2023 - Present</span>
-        <ul>
-            <li>Apply risk modeling and probability expertise to NC Math 2 curriculum, managing learning outcomes for 100+ students through data-driven performance tracking.</li>
-            <li>Selected as lead adopter for MagicSchool AI pilot program, providing technical feedback on GenAI tool implementation and ethical boundaries.</li>
-            <li>Awarded "Teacher Extraordinaire" (2025) by Kiwanis Club for integrity and building high-trust learning environments.</li>
-        </ul>
-    </div>
+    <table>
+        <tr>
+            <td class="job-cell">
+                <div class="job-title">Mathematics Educator — Dixon High School</div>
+                <div class="job-meta">August 2023 - Present</div>
+                <ul>
+                    <li>Apply risk modeling and probability expertise to NC Math 2 curriculum for 100+ students.</li>
+                    <li>Lead adopter for MagicSchool AI pilot program; providing technical feedback on GenAI tools.</li>
+                    <li>Awarded "Teacher Extraordinaire" (2025) for integrity and high-trust learning environments.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="job-cell">
+                <div class="job-title">Risk Analyst (Technical Solutions) — IP House (Global Tier-1 Cloud Provider)</div>
+                <div class="job-meta">January 2018 - June 2023</div>
+                <ul>
+                    <li><strong>Strategic Liaison:</strong> Spearheaded coordination between Data Scientists and operations for Azure credit recovery.</li>
+                    <li><strong>Global Operations:</strong> Managed QA for specialized agents across US, Brazil, Singapore, and Tallinn.</li>
+                    <li><strong>Data Munging:</strong> Aggregated multi-stream telemetry via COSMOS/SCOPE to SQL/Power BI for real-time optics.</li>
+                    <li><strong>C# Tooling:</strong> Developed custom parsers for raw logs to mitigate BEC/ATO scenarios and ensure hourly-SLA reporting.</li>
+                    <li><strong>Business Continuity:</strong> Adopted ADO for risk code; prevented total data loss during catastrophic hardware failure.</li>
+                    <li><strong>Threat Intelligence:</strong> Conducted OSINT research on darkweb markets to profile bot authors and identify gaps.</li>
+                    <li><strong>Adjudication:</strong> Forensic analysis for high-dollar Traffic Quality disputes to validate claims and control disbursements.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="job-cell">
+                <div class="job-title">Fraud Analyst — IP House (Global Tier-1 Cloud Provider)</div>
+                <div class="job-meta">January 2014 - January 2018</div>
+                <ul>
+                    <li>Conducted high-volume manual fraud review across Xbox and Microsoft Store to disrupt bot abuse.</li>
+                    <li>Self-taught Python/SQL to automate workflows, transitioning from manual review to proactive SQL investigations.</li>
+                    <li>Created C# utility for automated decision uploads, ensuring data integrity and saving administrative overhead.</li>
+                    <li>Volunteered for technical projects acquiring proficiency in COSMOS, SCOPE, and Power Automate.</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
 
-    <div class="job">
-        <span class="job-title">Risk Analyst (Technical Solutions & Fraud Detection)</span>
-        <span class="job-company">IP House (Contractor for Global Tier-1 Cloud Provider)</span>
-        <span class="job-date">January 2018 - June 2023</span>
-        <ul>
-            <li><strong>Strategic Liaison:</strong> Acted as technical spearhead between internal Data Scientists and operational teams to ensure proposed manual review systems aggregated the necessary data to reconcile and action abusive Azure credits.</li>
-            <li><strong>Global Operations:</strong> Managed task coverage and quality assurance for a specialized team of 5 manual review agents across four global locations (US, Brazil, Singapore, and Tallinn).</li>
-            <li><strong>Data Munging & Pipelines:</strong> Aggregated multi-stream cloud telemetry from COSMOS/SCOPE into SQL/Power BI environments to provide real-time optics on fraud trends and credit consumption.</li>
-            <li><strong>C# Forensic Tooling:</strong> Developed custom C# parsers to ingest and normalize raw threat-actor server logs, enabling hourly-SLA reporting and mitigation for BEC/ATO scenarios.</li>
-            <li><strong>Business Continuity:</strong> Spearheaded the adoption of Azure DevOps (ADO) for internal risk code management; prevented total data loss and maintained 100% operational uptime during a catastrophic hardware failure.</li>
-            <li><strong>Threat Intelligence:</strong> Conducted OSINT research across darkweb marketplaces and closed forums to profile bot authors and identify control gaps in loyalty defenses.</li>
-            <li><strong>Technical Adjudication:</strong> Served as a primary technical resource for high-dollar Traffic Quality disputes, performing forensic analysis to validate claims and control disbursements.</li>
-        </ul>
-    </div>
-
-    <div class="job">
-        <span class="job-title">Fraud Analyst</span>
-        <span class="job-company">IP House (Contractor for Global Tier-1 Cloud Provider)</span>
-        <span class="job-date">January 2014 - January 2018</span>
-        <ul>
-            <li>Conducted high-volume manual fraud review across Xbox, Microsoft Store, and Bing Ads platforms to prevent chargebacks and disrupt bot abuse.</li>
-            <li>Self-taught Python and SQL to automate Excel-based analysis workflows, transitioning from manual review to proactive SQL-based investigations (~2015).</li>
-            <li>Created a C# utility to automate decision uploads for review agents, saving significant administrative overhead and ensuring data integrity in shared repositories.</li>
-            <li>Volunteered for technical projects outside manual review scope, acquiring proficiency in COSMOS, SCOPE, and Power Automate to support engineering-heavy initiatives.</li>
-        </ul>
-    </div>
-
-    <div class="section-title">Education & Technical Skills</div>
-    <div class="footer-area">
-        <p><strong>Education:</strong> Bachelor of Arts (B.A.), Accounting & History (Double Major) | Washington and Jefferson College, Washington, PA</p>
-        <p style="margin-top: 10px;"><strong>Technical Skills:</strong> SQL, KQL/Kusto, COSMOS/SCOPE, Power BI, DAX, Python, C#, JavaScript, VBA, Power Automate, Git, Azure DevOps (ADO), OSINT, Threat Intelligence, Red Team Operations, Forensic Analysis, Risk Modeling.</p>
+    <div class="section-title">Education & Skills</div>
+    <div class="skills-footer">
+        <strong>Education:</strong> B.A., Accounting & History | Washington and Jefferson College<br>
+        <strong>Skills:</strong> SQL, KQL, COSMOS/SCOPE, Power BI, Python, C#, JavaScript, Azure DevOps, OSINT, Threat Intel, Forensic Analysis, Risk Modeling.
     </div>
 </body>
 </html>
